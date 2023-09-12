@@ -27,14 +27,16 @@
   </div>
   <div class="glass">
     <h1>Ask me Your question?</h1>
-    <h2>Ready, type your questions below...</h2>
+    <h2> when Ready, type your questions...here⬇️⬇️ </h2>
     <div class="input">
       <!-- <input type="text" id="userbox" placeholder="Type your questions" /> -->
       <input type="text" id="userbox" placeholder="Type your questions" onkeydown="handleEnter(event)">
       <button onclick="talk()">Submit</button> <!-- Added Submit button -->
     </div>
-    <p id="chatLog">Answer will appear here⬇️⬇️ </p>
+    <p id="chatLog" class="chats">Answer will appear here⬇️⬇️ </p>
+    <img src="./images/Ai_book.png" alt="img" >
   </div>
+
   <script>
     function handleEnter(event) {
       if (event.keyCode === 13) {
@@ -70,19 +72,20 @@
 
     function talk() {
       var know = {
-        // ...  knowledge base ...
+        // ...My knowledge base ...
           
-                 "hello": "Hello too, what do you have for today...",
+                "hello": "Hello too, what do you have for today...",
                 "who are you": " Hello, I am an AI created by Simon",
                 "how are you": "I am Good, Looking forward to serve you",
                 "ok": "Great to serve you",
+                "hi": "hello, what can i do for you",
                 "bye": "Okay! Always ready to serve you... 😂 ",
                 "what can you do": "I can answer your questions 😂😂",
                 "What is your name?": "I am Ask_Simon_Bot, your virtual assistant.",
-                 "welcome": "look at you,,😂😂",
+                "welcome": "look at you,,😂😂",
                 "How can you help me?": "I can assist you with various questions and provide information on a wide range of topics.",
-                 "Where are you from?": "I am an AI language model developed by OpenAI.",
-                 "What is the weather like today?": "I'm sorry, but I don't have real-time information. You can check a weather website or app for current conditions.",
+                "Where are you from?": "I am an AI language model developed by OpenAI.",
+                "What is the weather like today?": "I'm sorry, but I don't have real-time information. You can check a weather website or app for current conditions.",
                 "Tell me a joke.": "Why don't scientists trust atoms? Because they make up everything!",
                 "How does photosynthesis work?": "Photosynthesis is the process by which plants convert sunlight into energy and produce oxygen.",
                 "What is the capital of France?": "The capital of France is Paris.",
@@ -102,6 +105,7 @@
                  "What is the capital of Japan?": "The capital of Japan is Tokyo.",
                  "How do I format a Word document?": "To format a Word document, you can use the formatting options in the 'Home' tab, such as font style, size, and alignment.",
                  "Tell me about the theory of relativity.": "The theory of relativity, proposed by Albert Einstein, describes the relationships between space, time, and gravity.",
+                 "what do you love": "I love everything Simon loves",
                  "What are some good books to read?": "There are many great books to choose from, depending on your interests. You can explore bestseller lists or ask for recommendations at a local library or bookstore.",
                  "How do I start a blog?": "To start a blog, choose a blogging platform, select a domain name, and start creating and publishing content.",
                  "What is the formula for calculating the area of a circle?": "The formula to calculate the area of a circle is A = πr^2, where 'A' is the area and 'r' is the radius.",
@@ -114,6 +118,7 @@
                  "What is the currency of Japan?": "The currency of Japan is the Japanese Yen (¥).",
                  "How do I tie a tie?": "There are several ways to tie a tie, including the Windsor, Half-Windsor, and Four-in-Hand knots. Look up tutorials online for step-by-step instructions.",
                  "What are the main components of a computer?": "The main components of a computer include the CPU, RAM, hard drive, motherboard, and graphics card.",
+                 "do you love God": "off-course yes",
                  "How do I make homemade ice cream?": "To make homemade ice cream, you'll need ingredients like cream, sugar, and flavorings. Use an ice cream maker or follow no-churn recipes for easier preparation.",
                  "What are the symptoms of allergies?": "Common symptoms of allergies include sneezing, runny nose, itchy eyes, and skin rashes.",
                  "What is the largest mammal on Earth?": "The blue whale is the largest mammal on Earth.",
@@ -124,22 +129,35 @@
                  "What are the benefits of meditation?": "Meditation can reduce stress, improve focus, and promote a sense of calm and well-being.",
                  "What are the symptoms of a common cold?": "Symptoms of a common cold include a runny nose, sore throat, cough, and mild fever.",
                  "What is the boiling point of water?": "The boiling point of water at sea level is 100 degrees Celsius (212 degrees Fahrenheit).",
+                 "Who is God": "The almighty Father we christians believe in",
+                 "i love you": "stop kidding, only Simon loves me",
+                 "what is your favourite food": "i realy love questions as my meal, hope you get it",
+                 "who created you": "Simon did it, Reach out to him",
+                 "youtube": " you can search on your google chrome app all check this link' https://youtube.com",
                  "How do I change the batteries in a remote control?": "To change the batteries in a remote control, open the battery compartment, remove the old batteries, and insert new ones with the correct polarity.",
                  "What are the main types of clouds?": "The main types of clouds include cumulus, stratus, cirrus, and nimbus clouds, each with different characteristics.",
                  "How do I start a small business?": "To start a small business, develop a business plan, register your business, and secure funding if needed.",
                  "What are the benefits of drinking water?": "Drinking water is essential for staying hydrated, maintaining bodily functions, and promoting overall health.",
                  "How do I make a paper airplane?": "To make a paper airplane, fold a piece of paper into a simple design and then experiment with different folding techniques for better flight.",
                  "What is the capital of China?": "The capital of China is Beijing.",
+                 "best programming language": "python and java",
+                 "what is coding": "developing lines of codes",
                  "How do I make a fruit smoothie?": "To make a fruit smoothie, blend your favorite fruits with yogurt, milk, or juice until smooth.",
                  "What are the symptoms of a concussion?": "Symptoms of a concussion may include headache, dizziness, confusion, and sensitivity to light and noise. Seek medical attention if you suspect a concussion.",
+                 "can you answer questions": "yah, thats why i exist",
                  "What is the formula for calculating the volume of a cylinder?": "The formula to calculate the volume of a cylinder is V = πr^2h, where 'V' is the volume, 'r' is the radius, and 'h' is the height.",
                  "What are the health benefits of green tea?": "Green tea is rich in antioxidants and may promote heart health and improve brain function.",
-                "What is the largest desert in the world?": "The largest desert in the world is the Antarctic Desert.",
+                 "What is the largest desert in the world?": "The largest desert in the world is the Antarctic Desert.",
+                 "what cant you do": "i cant call you mum for you 😂😂, just kidding i cant do what is not in my knowledge base",
                  "How do I make homemade pizza dough?": "To make homemade pizza dough, combine flour, yeast, water, and olive oil, then knead the dough until smooth and let it rise before using.",
                  "What are the symptoms of a stroke?": "Symptoms of a stroke include sudden numbness or weakness, confusion, trouble speaking, and difficulty walking. Call emergency services immediately if you suspect a stroke.",
                  "What is the capital of India?": "The capital of India is New Delhi.",
                  "How do I create a strong password?": "To create a strong password, use a combination of uppercase and lowercase letters, numbers, and special characters, and avoid using easily guessable information.",
                  "What are the benefits of regular exercise?": "Regular exercise can improve cardiovascular health, boost mood, and help with weight management.",
+                 "which is the best phone": "simon loves  SAMSUNG Galaxy Flipflop",
+                 "Which is the best laptop": "according to simon, he loves Acer Predator Triton 500 12th generation intel i9-12900H",
+                 "where do you come from": "i share same place with  simon",
+                 "where does he came from": "hahaha, hes from Kenya too",
                  "What is the formula for calculating the area of a triangle?": "The formula to calculate the area of a triangle is A = (1/2)bh, where 'A' is the area, 'b' is the base, and 'h' is the height.",
                  "How do I clean my laptop screen?": "To clean your laptop screen, use a soft, lint-free cloth slightly dampened with water or a screen-cleaning solution, and gently wipe the screen in a circular motion.",
                  "What are the symptoms of anxiety?": "Symptoms of anxiety may include excessive worry, restlessness, and increased heart rate. If you experience severe anxiety, consider seeking professional help.",
@@ -152,7 +170,7 @@
                  "What is the boiling point of alcohol?": "The boiling point of alcohol depends on the type of alcohol. For example, the boiling point of ethanol is around 78 degrees Celsius (172 degrees Fahrenheit).",
                  "How do I clean my microwave?": "To clean your microwave, fill a microwave-safe bowl with water and a splash of vinegar, microwave it for a few minutes, then wipe the interior with a damp cloth.",
                  "What are the symptoms of diabetes?": "Symptoms of diabetes include increased thirst, frequent urination, and unexplained weight loss. If you experience these symptoms, see a healthcare professional for evaluation.",
-                 "What is the capital of South Africa?": "The capital of South Africa is Pretoria.",
+                 "What is the capital city of South Africa?": "The capital of South Africa is Pretoria.",
                  "How do I make a classic Old Fashioned cocktail?": "To make a classic Old Fashioned, muddle sugar, bitters, and a splash of water in a glass, add whiskey or bourbon, ice, and stir. Garnish with an orange twist and a cherry.",
                  "What are the benefits of eating fruits and vegetables?": "Fruits and vegetables are rich in vitamins, minerals, and fiber, which contribute to overall health and well-being.",
                  "What is the formula for calculating the circumference of a circle?": "The formula to calculate the circumference of a circle is C = 2πr, where 'C' is the circumference and 'r' is the radius.",
@@ -161,26 +179,28 @@
                  "What is the largest ocean on Earth?": "The largest ocean on Earth is the Pacific Ocean.",
                  "How do I reset my password on social media?": "To reset your password on social media, go to the login page, click on 'Forgot Password,' and follow the prompts to reset your password.",
                  "What are the health benefits of regular exercise?": "Regular exercise can improve cardiovascular health, strengthen muscles, and boost mood.",
-                 "What is the capital of Canada?": "The capital of Canada is Ottawa.",
+                 "What is the capital city of Canada?": "The capital of Canada is Ottawa.",
                  "How do I make a classic Mojito cocktail?": "To make a classic Mojito, muddle mint leaves, sugar, and lime juice in a glass, add rum, ice, and top with soda water. Garnish with a mint sprig and lime wedge.",
-                 "What are the symptoms of a common cold?": "Symptoms of a common cold include a runny nose, sore throat, cough, and mild fever.",
+                 "which is the best car": "simon love Porsche, jaguar, audi and BMW.",
                  "What is the freezing point of water?": "The freezing point of water at sea level is 0 degrees Celsius (32 degrees Fahrenheit).",
                  "How do I change the light bulb in a lamp?": "To change the light bulb in a lamp, turn off the power, let the bulb cool if it was recently on, then unscrew the old bulb and screw in a new one of the same wattage and type.",
                  "What are the main types of rock?": "The main types of rock are igneous, sedimentary, and metamorphic rocks, each formed through different geological processes.",
-                 "How do I make homemade lemonade?": "To make homemade lemonade, mix fresh lemon juice, water, and sugar to taste.",
+                 "How to make homemade lemonade?": "To make homemade lemonade, mix fresh lemon juice, water, and sugar to taste.",
                  "What are the symptoms of a stomach ache?": "Symptoms of a stomach ache may include abdominal pain, bloating, and nausea. If the pain is severe or persistent, seek medical advice.",
                  "What is the capital of Germany?": "The capital of Germany is Berlin.",
                  "What is the capital of kenya?": "The capital of kenya is Nairobi.",
                  "fuck you": "F**k you too",
+                 " ": "please enter your question",
+                 "what is software engineering": "Its a degree course My creator Simon has specialized in. reach out to him for further explanations",
                  "How do I make a classic Cosmopolitan cocktail?": "To make a classic Cosmopolitan, combine vodka, triple sec, cranberry juice, and lime juice in a shaker with ice, shake, and strain into a chilled cocktail glass. Garnish with a lime twist.",
                  "What are the benefits of getting enough sleep?": "Getting enough sleep is essential for physical and mental health, memory consolidation, and overall well-being.",
                  "What is the formula for calculating the volume of a sphere?": "The formula to calculate the volume of a sphere is V = (4/3)πr^3, where 'V' is the volume and 'r' is the radius.",
                  "How do I clean my oven?": "To clean your oven, remove racks and use an oven cleaner or a mixture of baking soda and water. Follow the manufacturer's instructions for self-cleaning ovens.",
-                 "What are the symptoms of a common cold?": "Symptoms of a common cold include a runny nose, sore throat, cough, and mild fever.",
+                 "What are symptoms of a common cold": "Symptoms of a common cold include a runny nose, sore throat, cough, and mild fever.",
                  "What is the boiling point of nitrogen?": "The boiling point of nitrogen is around -196 degrees Celsius (-321 degrees Fahrenheit).",
-                 "How do I connect to a Wi-Fi network?": "To connect to a Wi-Fi network, go to your device's settings, find the Wi-Fi option, select the network you want to join, and enter the password if required.",
+                 "How do I connect Wi-Fi network?": "To connect to a Wi-Fi network, go to your device's settings, find the Wi-Fi option, select the network you want to join, and enter the password if required.",
                  "What are the main types of renewable energy sources?": "Renewable energy sources include solar, wind, hydroelectric, geothermal, and biomass energy.",
-                 "How do I set up a new email account?": "To set up a new email account, choose an email provider, go to their website, and follow the instructions to create an account with a unique username and password.",
+                 "How do i create a new email account?": "To set up a new email account, choose an email provider, go to their website, and follow the instructions to create an account with a unique username and password.",
    
       };
 
